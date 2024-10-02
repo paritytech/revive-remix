@@ -1,5 +1,0 @@
-{
-    "watch": ["./src", "./bin"],
-    "ext": "ts",
-    "exec": "yarn run build && yarn run start"
-}

@@ -1,1 +1,0 @@
-export { isoGit } from './src/isogit'

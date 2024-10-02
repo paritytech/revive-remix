@@ -1,5 +1,0 @@
-require('./eventManager.ts')
-require('./util.ts')
-require('./txFormat.ts')
-require('./txHelper.ts')
-require('./txResultHelper.ts')
