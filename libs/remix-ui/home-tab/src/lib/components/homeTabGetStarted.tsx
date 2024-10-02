@@ -36,13 +36,13 @@ const workspaceTemplates: WorkspaceTemplate[] = [
     projectLogo: 'assets/img/remixverticaltextLogo.png',
     templateName: 'remixDefault',
   },
-  {
-    gsID: 'sUTLogo',
-    workspaceTitle: 'ZK Semaphore',
-    description: 'Create a new ZK Project with Circom using this template.',
-    projectLogo: 'assets/img/circom.webp',
-    templateName: 'semaphore',
-  },
+  // {
+  //   gsID: 'sUTLogo',
+  //   workspaceTitle: 'ZK Semaphore',
+  //   description: 'Create a new ZK Project with Circom using this template.',
+  //   projectLogo: 'assets/img/circom.webp',
+  //   templateName: 'semaphore',
+  // },
   {
     gsID: 'sUTLogo',
     workspaceTitle: 'ERC20',
@@ -50,13 +50,13 @@ const workspaceTemplates: WorkspaceTemplate[] = [
     projectLogo: 'assets/img/oxprojectLogo.png',
     templateName: 'ozerc20',
   },
-  {
-    gsID: 'sUTLogo',
-    workspaceTitle: 'Uniswap V4 Hooks',
-    description: 'Create a new workspace based on this template.',
-    projectLogo: 'assets/img/gnosissafeLogo.png',
-    templateName: 'uniswapV4Template',
-  },
+  // {
+  //   gsID: 'sUTLogo',
+  //   workspaceTitle: 'Uniswap V4 Hooks',
+  //   description: 'Create a new workspace based on this template.',
+  //   projectLogo: 'assets/img/gnosissafeLogo.png',
+  //   templateName: 'uniswapV4Template',
+  // },
   {
     gsID: 'sUTLogo',
     workspaceTitle: 'NFT / ERC721',
@@ -64,13 +64,13 @@ const workspaceTemplates: WorkspaceTemplate[] = [
     projectLogo: 'assets/img/openzeppelinLogo.png',
     templateName: 'ozerc721',
   },
-  {
-    gsID: 'sUTLogo',
-    workspaceTitle: 'MultiSig',
-    description: 'Create a new MultiSig wallet using this template.',
-    projectLogo: 'assets/img/gnosissafeLogo.png',
-    templateName: 'gnosisSafeMultisig',
-  }
+  // {
+  //   gsID: 'sUTLogo',
+  //   workspaceTitle: 'MultiSig',
+  //   description: 'Create a new MultiSig wallet using this template.',
+  //   projectLogo: 'assets/img/gnosissafeLogo.png',
+  //   templateName: 'gnosisSafeMultisig',
+  // }
 ]
 
 function HomeTabGetStarted({ plugin }: HomeTabGetStartedProps) {

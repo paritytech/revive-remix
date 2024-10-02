@@ -24,8 +24,7 @@ const loadLocalSolJson = async () => {
 
 fs.writeFileSync(__dirname + '/src/assets/version.json', JSON.stringify(versionData))
 
-
-loadLocalSolJson()
+//loadLocalSolJson()
 
 const project = fs.readFileSync(__dirname + '/project.json', 'utf8')
 
@@ -99,11 +98,7 @@ module.exports = composePlugins(withNx(), withReact(), (config) => {
 
 
   // add public path
-  if(process.env.NX_DESKTOP_FROM_DIST){
-    config.output.publicPath = './'
-  }else{
-    config.output.publicPath = '/'
-  }
+  config.output.publicPath = './'
 
   // set filename
   config.output.filename = `[name].${versionData.version}.${versionData.timestamp}.js`

@@ -20,7 +20,7 @@ export type ScamAlert = {
 }
 
 export function RemixUIStatusBar({ statusBarPlugin }: RemixUIStatusBarProps) {
-  const [showScamDetails, setShowScamDetails] = useState(true)
+  const [showScamDetails, setShowScamDetails] = useState(false)
   const [scamAlerts, setScamAlerts] = useState<ScamAlert[]>([])
   const [gitBranchName, setGitBranchName] = useState('')
   const [isAiActive, setIsAiActive] = useState(false)
@@ -86,9 +86,9 @@ export function RemixUIStatusBar({ statusBarPlugin }: RemixUIStatusBarProps) {
             <div className="remixui_statusbar">
               <AIStatus plugin={statusBarPlugin} aiActive={lightAiUp} isAiActive={isAiActive} setIsAiActive={setIsAiActive} />
             </div>
-            <div className="remixui_statusbar bg-warning px-2 remixui_statusbar_custom_padding d-flex justify-center align-items-center">
+            {/* <div className="remixui_statusbar bg-warning px-2 remixui_statusbar_custom_padding d-flex justify-center align-items-center">
               <ScamAlertStatus refs={refs} getReferenceProps={getReferenceProps} />
-            </div>
+            </div> */}
           </div>
         </div>
       </StatusBarContextProvider>

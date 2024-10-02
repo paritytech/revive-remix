@@ -37,7 +37,7 @@ export class ExecutionContext {
   }
 
   init (config) {
-    this.executionContext = 'vm-cancun'
+    this.executionContext = ''
     this.event.trigger('contextChanged', [this.executionContext])
   }
 

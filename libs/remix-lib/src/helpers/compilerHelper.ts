@@ -14,7 +14,7 @@ export function compilerInput (contracts) {
       outputSelection: {
         '*': {
           '': ['ast'],
-          '*': ['abi', 'metadata', 'evm.legacyAssembly', 'evm.bytecode', 'evm.deployedBytecode', 'evm.methodIdentifiers', 'evm.gasEstimates']
+          '*': ['abi', 'metadata', 'evm.legacyAssembly', 'evm.deployedBytecode', 'evm.methodIdentifiers']
         }
       }
     }

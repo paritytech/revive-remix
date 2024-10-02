@@ -46,7 +46,7 @@ export default class CodeParserAntlrService {
     this.worker = new Worker(new URL('./antlr-worker', import.meta.url))
     this.worker.postMessage({
       cmd: 'load',
-      url: Registry.getInstance().get('platform').api.isDesktop() ? 'assets/js/parser/antlr.js' : document.location.protocol + '//' + document.location.host + '/assets/js/parser/antlr.js',
+      url: 'assets/js/parser/antlr.js',
     })
     const self = this
 

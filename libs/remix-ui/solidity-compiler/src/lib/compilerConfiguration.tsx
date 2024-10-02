@@ -9,7 +9,7 @@ export const configFileContent = `
 		"outputSelection": {
 			"*": {
 			"": ["ast"],
-			"*": ["abi", "metadata", "devdoc", "userdoc", "storageLayout", "evm.legacyAssembly", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "evm.gasEstimates", "evm.assembly"]
+			"*": ["abi", "metadata", "devdoc", "userdoc", "storageLayout", "evm.legacyAssembly", "evm.deployedBytecode", "evm.methodIdentifiers"]
 			}
 		}
 	}

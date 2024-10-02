@@ -91,7 +91,8 @@ let requiredModules = [ // services + layout views + system views
 // dependentModules shouldn't be manually activated (e.g hardhat is activated by remixd)
 const dependentModules = ['foundry', 'hardhat', 'truffle', 'slither']
 
-const loadLocalPlugins = ['doc-gen', 'doc-viewer', 'etherscan', 'vyper', 'solhint', 'walletconnect', 'circuit-compiler', 'learneth', 'quick-dapp']
+// const loadLocalPlugins = ['doc-gen', 'doc-viewer', 'etherscan', 'vyper', 'solhint', 'walletconnect', 'circuit-compiler', 'learneth', 'quick-dapp']
+const loadLocalPlugins = ['solhint', 'doc-gen', 'doc-viewer', 'quick-dapp']
 
 const sensitiveCalls = {
   fileManager: ['writeFile', 'copyFile', 'rename', 'copyDir'],
@@ -160,7 +161,7 @@ export class RemixAppManager extends PluginManager {
   constructor() {
     super()
     this.event = new EventEmitter()
-    this.pluginsDirectory = 'https://raw.githubusercontent.com/ethereum/remix-plugins-directory/master/build/metadata.json'
+    this.pluginsDirectory = './assets/js/metadata.json'
     this.pluginLoader = new PluginLoader()
     if (Registry.getInstance().get('platform').api.isDesktop()) {
       requiredModules = [...requiredModules, 'fs', 'electronTemplates', 'isogit', 'remix-templates', 'electronconfig', 'xterm', 'compilerloader', 'ripgrep']

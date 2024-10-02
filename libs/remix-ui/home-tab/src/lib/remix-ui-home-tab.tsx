@@ -84,11 +84,11 @@ export const RemixUiHomeTab = (props: RemixUiHomeTabProps) => {
               <HomeTabFileElectron plugin={plugin}></HomeTabFileElectron>}
             {/* <HomeTabLearn plugin={plugin} /> */}
           </div>
-          <div className="pl-2 pr-3 justify-content-start d-flex flex-column" style={{ width: `${carouselWidth}%` }} id="remixUIHTRight">
+          {/* <div className="pl-2 pr-3 justify-content-start d-flex flex-column" style={{ width: `${carouselWidth}%` }} id="remixUIHTRight">
             <LanguageOptions plugin={plugin}/>
             <HomeTabFeatured></HomeTabFeatured>
             <HomeTabFeaturedPlugins plugin={plugin}></HomeTabFeaturedPlugins>
-          </div>
+          </div> */}
         </div>
       </ThemeContext.Provider>
     </div>
