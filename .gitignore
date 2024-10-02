@@ -10,7 +10,6 @@ docs/_build
 .DS_Store
 .tern-port
 TODO
-soljson.js
 *~
 *_group*.*.ts
 *_group*.ts
