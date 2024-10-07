@@ -54,6 +54,13 @@ export const CompilerApiMixin = (Base) => class extends Base {
     this.currentFile = ''
   }
 
+  isBuiltinCompiler() {
+    if (!this.solJsonBinData.binList || (this.solJsonBinData.binList && this.solJsonBinData.binList.length == 0)) {
+      return true;
+    }
+    return false;
+  }
+
   onActivation () {
     this.listenToEvents()
   }

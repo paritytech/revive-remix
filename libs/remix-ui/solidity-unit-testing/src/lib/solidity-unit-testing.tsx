@@ -607,7 +607,16 @@ export const SolidityUnitTesting = (props: Record<string, any>) => {
         runningTests[testFilePath] = { content }
         filesContent[testFilePath] = { content }
         const { currentVersion, evmVersion, optimize, runs, isUrl } = testTab.compileTab.getCurrentCompilerConfig()
-        const currentCompilerUrl = isUrl ? currentVersion : urlFromVersion(currentVersion)
+        let currentCompilerUrl: any;
+        if (isUrl) {
+          currentCompilerUrl = currentVersion;
+        }
+        else if (testTab.compileTab.isBuiltinCompiler()) {
+           currentCompilerUrl = urlFromVersion('builtin');
+        }
+        else {
+          currentCompilerUrl = urlFromVersion(currentVersion)
+        }
         const compilerConfig = {
           currentCompilerUrl,
           evmVersion,

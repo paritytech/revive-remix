@@ -246,7 +246,7 @@ export class RunTab extends ViewPlugin {
     // await addProvider(6, 'walletconnect', 'WalletConnect', false, false)
 
     // external provider
-    // await addProvider(10, 'basic-http-provider', 'Custom - External Http Provider', false, false)
+    await addProvider(10, 'basic-http-provider', 'Custom - External Http Provider', false, false)
     // await addProvider(20, 'hardhat-provider', 'Dev - Hardhat Provider', false, false)
     // await addProvider(21, 'ganache-provider', 'Dev - Ganache Provider', false, false)
     // await addProvider(22, 'foundry-provider', 'Dev - Foundry Provider', false, false)
