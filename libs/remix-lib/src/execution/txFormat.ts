@@ -5,6 +5,7 @@ import { eachOfSeries } from 'async'
 import { linkBytecode as linkBytecodeSolc } from 'solc/linker'
 import { isValidAddress, addHexPrefix } from '@ethereumjs/util'
 import fromExponential from 'from-exponential';
+import RLP from 'rlp'
 
 /**
   * build the transaction data
@@ -245,7 +246,9 @@ export function buildData (contractName, contract, contracts, isConstructor, fun
       }, callbackStep, callbackDeployLibrary)
       return
     } else {
-      dataHex = bytecodeToDeploy + dataHex
+      let dataRlp = RLP.encode([Buffer.from(bytecodeToDeploy, 'hex'), Buffer.from(dataHex, 'hex')])
+      dataHex = Buffer.from(dataRlp).toString('hex');
+      //dataHex = bytecodeToDeploy + dataHex
     }
   } else {
     dataHex = encodeFunctionId(funAbi) + dataHex

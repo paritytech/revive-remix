@@ -111,7 +111,7 @@ function HomeTabTitle() {
           </div>
         </div>
         <span className="d-flex flex-nowrap align-self-end">
-          {iconButtons.map((button, index) => (
+          {/* {iconButtons.map((button, index) => (
             <CustomTooltip
               key={index}
               placement={button.placement}
@@ -129,7 +129,7 @@ function HomeTabTitle() {
                 className={`border-0 h-100 px-1 btn fab ${button.iconClass}`}
               ></button>
             </CustomTooltip>
-          ))}
+          ))} */}
         </span>
       </div>
       <b className="py-1 text-dark" style={{ fontStyle: 'italic' }}>
@@ -147,14 +147,14 @@ function HomeTabTitle() {
         >
           <FormattedMessage id="home.documentation" />
         </a> */}
-        <a
+        {/* <a
           className="pl-2 remixui_home_text"
           onClick={() => _paq.push(['trackEvent', 'hometab', 'header', 'remixDesktop'])}
           target="__blank"
           href="https://github.com/remix-project-org/remix-desktop-insiders"
         >
           <FormattedMessage id="home.remixDesktop" />
-        </a>
+        </a> */}
       </div>
       <div className="d-flex pb-1 align-items-center">
         <input
