@@ -29,6 +29,8 @@ jobs:
       - run: yarn
       - run: yarn build:libs
       - run: yarn run build:production
+      # Preserve custom domain name
+      - run: echo "remix.polkadot.io" > ./dist/apps/remix-ide/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
