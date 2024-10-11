@@ -246,9 +246,7 @@ export function buildData (contractName, contract, contracts, isConstructor, fun
       }, callbackStep, callbackDeployLibrary)
       return
     } else {
-      let dataRlp = RLP.encode([Buffer.from(bytecodeToDeploy, 'hex'), Buffer.from(dataHex, 'hex')])
-      dataHex = Buffer.from(dataRlp).toString('hex');
-      //dataHex = bytecodeToDeploy + dataHex
+      dataHex = bytecodeToDeploy + dataHex
     }
   } else {
     dataHex = encodeFunctionId(funAbi) + dataHex

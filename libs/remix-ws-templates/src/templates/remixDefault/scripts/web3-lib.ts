@@ -28,9 +28,13 @@ export const deploy = async (contractName: string, args: Array<any>, from?: stri
     arguments: args
   })
 
+  const gasEstimate = await contractSend.estimateGas({
+    from: from || accounts[0],
+  })
+
   const newContractInstance = await contractSend.send({
     from: from || accounts[0],
-    gas: gas || 1500000
+    gas: gas || gasEstimate
   })
   return newContractInstance.options
 }

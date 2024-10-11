@@ -8,8 +8,8 @@ describe("Storage", function () {
   it("test initial value", async function () {
     const artifactsPath = `browser/contracts/artifacts/Storage.json`
     const metadata = JSON.parse(await remix.call('fileManager', 'getFile', artifactsPath))
-    signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner(0)
-    factory = new ethers.ContractFactory(metadata.abi, metadata.data.bytecode.object, signer)
+    const signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner(0)
+    const factory = new ethers.ContractFactory(metadata.abi, metadata.data.bytecode.object, signer)
     const storage = await factory.deploy()
     await storage.deployed()
     console.log("storage deployed at:" + storage.address);
@@ -18,8 +18,8 @@ describe("Storage", function () {
   it("test updating and retrieving updated value", async function () {
     const artifactsPath = `browser/contracts/artifacts/Storage.json`
     const metadata = JSON.parse(await remix.call('fileManager', 'getFile', artifactsPath))
-    signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner(0)
-    factory = new ethers.ContractFactory(metadata.abi, metadata.data.bytecode.object, signer)
+    const signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner(0)
+    const factory = new ethers.ContractFactory(metadata.abi, metadata.data.bytecode.object, signer)
     const storage = await factory.deploy()
     await storage.deployed();
     const storage2 = await ethers.getContractAt("Storage", storage.address);
