@@ -629,7 +629,7 @@ export const SolidityUnitTesting = (props: Record<string, any>) => {
           await testTab.call('compilerArtefacts', 'addResolvedContract', contractAddress, compilerData)
         }
 
-        await testTab.testRunner.init(await testTab.call('blockchain', 'web3VM'))
+        await testTab.testRunner.init(await testTab.call('blockchain', 'web3'), await testTab.call('blockchain', 'getAccounts'))
         await testTab.createTestLibs()
         testTab.testRunner.runTestSources(
           runningTests,

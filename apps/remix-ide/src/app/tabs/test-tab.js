@@ -74,7 +74,7 @@ module.exports = class TestTab extends ViewPlugin {
     if (!isSolidityActive) {
       await this.call('manager', 'activatePlugin', 'solidity')
     }
-    await this.testRunner.init(await this.call('blockchain', 'web3VM'))
+    await this.testRunner.init(await this.call('blockchain', 'web3'))
     await this.createTestLibs()
   }
 
@@ -110,8 +110,12 @@ module.exports = class TestTab extends ViewPlugin {
     Test is not associated with the UI
   */
   async testFromSource (content, path = 'browser/unit_test.sol') {
-    const web3 = await this.call('blockchain', 'web3VM')
-    await this.testRunner.init(web3)
+    const web3 = await this.call('blockchain', 'web3')
+    const accounts = await this.call('blockchain', 'getAccounts')
+    if (!accounts || accounts.length === 0) {
+      throw new Error('no account available')
+    }
+    await this.testRunner.init(web3. accounts)
     await this.createTestLibs()
     return new Promise((resolve, reject) => {
       const runningTest = {}

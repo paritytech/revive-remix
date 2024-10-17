@@ -58,24 +58,31 @@ export function deployAll (compileResult: compilationInterface, web3: Web3, test
     },
     function deployContracts (contractsToDeploy: string[], next) {
       const deployRunner = (deployObject, contractObject, contractName, filename, callback) => {
-        deployObject.estimateGas(undefined, { number: FMT_NUMBER.NUMBER, bytes: FMT_BYTES.HEX }).then((gasValue) => {
+        deployObject.estimateGas({
+          from: accounts[0]}, { number: FMT_NUMBER.NUMBER, bytes: FMT_BYTES.HEX }).then((gasValue) => {
           const gasBase = Math.ceil(gasValue * 1.2)
           const gas = withDoubleGas ? gasBase * 2 : gasBase
-          deployObject.send({
-            from: accounts[0],
-            gas: gas
-          }).on('receipt', async function (receipt) {
-            contractObject.options.address = receipt.contractAddress
-            contractObject.options.from = accounts[0]
-            contractObject.options.gas = 5000 * 1000
-            compiledObject[contractName].deployedAddress = receipt.contractAddress
+          web3.eth.getGasPrice().then((gasPrice) => {
+            deployObject.send({
+              from: accounts[0],
+              gas: gas,
+              gasPrice: gasPrice
+            }).on('receipt', async function (receipt) {
+              contractObject.options.address = receipt.contractAddress
+              contractObject.options.from = accounts[0]
+              contractObject.options.gas = 5000 * 1000
+              compiledObject[contractName].deployedAddress = receipt.contractAddress
 
-            contracts[contractName] = contractObject
-            contracts[contractName].filename = filename
+              contracts[contractName] = contractObject
+              contracts[contractName].filename = filename
 
-            if (deployCb) await deployCb(filename, receipt.contractAddress)
-            callback(null, { receipt: { contractAddress: receipt.contractAddress } }) // TODO this will only work with JavaScriptV VM
-          }).on('error', function (err) {
+              if (deployCb) await deployCb(filename, receipt.contractAddress)
+              callback(null, { receipt: { contractAddress: receipt.contractAddress } }) // TODO this will only work with JavaScriptV VM
+            }).on('error', function (err) {
+              console.error(err)
+              callback(err)
+            })
+          }).catch((err) => {
             console.error(err)
             callback(err)
           })

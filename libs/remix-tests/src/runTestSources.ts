@@ -24,7 +24,8 @@ export class UnitTestRunner {
   }
 
   async init (web3 = null, accounts = null) {
-    this.web3 = await this.createWeb3Provider(web3)
+    //this.web3 = await this.createWeb3Provider(web3)
+    this.web3 = web3
     this.testsAccounts = accounts || (this.web3 && await this.web3.eth.getAccounts()) || []
     this.accountsLibCode = writeTestAccountsContract(this.testsAccounts)
   }

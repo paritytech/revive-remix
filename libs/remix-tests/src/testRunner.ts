@@ -298,112 +298,124 @@ export function runTest (testName: string, testObject: any, contractDetails: Com
         }
       }
       if (!sendParams) sendParams = {}
-      sendParams.gas = 10000000 * 8
-      method.send(sendParams).on('receipt', async (receipt) => {
-        try {
-          debugTxHash = receipt.transactionHash
-          if (web3.remix && web3.remix.getHHLogsForTx) hhLogs = await web3.remix.getHHLogsForTx(receipt.transactionHash)
-          const time: number = (Date.now() - startTime) / 1000.0
-          const assertionEventHashes = assertionEvents.map(e => Web3.utils.sha3(e.name + '(' + e.params.join() + ')'))
-          let testPassed = false
-          for (const i in receipt.logs) {
-            let events = receipt.logs[i]
-            if (!Array.isArray(events)) events = [events]
-            for (const event of events) {
-              const eIndex = assertionEventHashes.indexOf(event.topics[0]) // event name topic will always be at index 0
-              if (eIndex >= 0) {
-                const testEvent = web3.eth.abi.decodeParameters(assertionEvents[eIndex].params, event.data)
-                if (!testEvent[0]) {
-                  const assertMethod = testEvent[2]
-                  if (assertMethod === 'ok') { // for 'Assert.ok' method
-                    testEvent[3] = 'false'
-                    testEvent[4] = 'true'
+      method.estimateGas(sendParams).then((gas) => {
+        web3.eth.getGasPrice().then((gasPrice) => {
+          // Set the gas and gasPrice, then send the transaction
+          sendParams.gas = gas
+          sendParams.gasPrice = gasPrice
+          method.send(sendParams).on('receipt', async (receipt) => {
+            try {
+              debugTxHash = receipt.transactionHash
+              if (web3.remix && web3.remix.getHHLogsForTx) hhLogs = await web3.remix.getHHLogsForTx(receipt.transactionHash)
+              const time: number = (Date.now() - startTime) / 1000.0
+              const assertionEventHashes = assertionEvents.map(e => Web3.utils.sha3(e.name + '(' + e.params.join() + ')'))
+              let testPassed = false
+              for (const i in receipt.logs) {
+                let events = receipt.logs[i]
+                if (!Array.isArray(events)) events = [events]
+                for (const event of events) {
+                  const eIndex = assertionEventHashes.indexOf(event.topics[0]) // event name topic will always be at index 0
+                  if (eIndex >= 0) {
+                    const testEvent = web3.eth.abi.decodeParameters(assertionEvents[eIndex].params, event.data)
+                    if (!testEvent[0]) {
+                      const assertMethod = testEvent[2]
+                      if (assertMethod === 'ok') { // for 'Assert.ok' method
+                        testEvent[3] = 'false'
+                        testEvent[4] = 'true'
+                      }
+                      const location = getAssertMethodLocation(fileAST, testName, func.name, assertMethod)
+                      const resp: TestResultInterface = {
+                        type: 'testFailure',
+                        value: changeCase.sentenceCase(func.name),
+                        filename: testObject.filename,
+                        time: time,
+                        errMsg: testEvent[1],
+                        context: testName,
+                        assertMethod,
+                        returned: testEvent[3],
+                        expected: testEvent[4],
+                        location,
+                        web3,
+                        debugTxHash
+                      }
+                      if (hhLogs && hhLogs.length) resp.hhLogs = hhLogs
+                      testCallback(undefined, resp)
+                      failureNum += 1
+                      timePassed += time
+                      return next()
+                    }
+                    testPassed = true
                   }
-                  const location = getAssertMethodLocation(fileAST, testName, func.name, assertMethod)
-                  const resp: TestResultInterface = {
-                    type: 'testFailure',
-                    value: changeCase.sentenceCase(func.name),
-                    filename: testObject.filename,
-                    time: time,
-                    errMsg: testEvent[1],
-                    context: testName,
-                    assertMethod,
-                    returned: testEvent[3],
-                    expected: testEvent[4],
-                    location,
-                    web3,
-                    debugTxHash
-                  }
-                  if (hhLogs && hhLogs.length) resp.hhLogs = hhLogs
-                  testCallback(undefined, resp)
-                  failureNum += 1
-                  timePassed += time
-                  return next()
                 }
-                testPassed = true
               }
-            }
-          }
 
-          if (testPassed) {
+              if (testPassed) {
+                const resp: TestResultInterface = {
+                  type: 'testPass',
+                  value: changeCase.sentenceCase(func.name),
+                  filename: testObject.filename,
+                  time: time,
+                  context: testName,
+                  web3,
+                  debugTxHash
+                }
+                if (hhLogs && hhLogs.length) resp.hhLogs = hhLogs
+                testCallback(undefined, resp)
+                passingNum += 1
+                timePassed += time
+              } else if (hhLogs && hhLogs.length) {
+                const resp: TestResultInterface = {
+                  type: 'logOnly',
+                  value: changeCase.sentenceCase(func.name),
+                  filename: testObject.filename,
+                  time: time,
+                  context: testName,
+                  hhLogs
+                }
+                testCallback(undefined, resp)
+                timePassed += time
+              }
+
+              return next()
+            } catch (err) {
+              console.error(err)
+              return next(err)
+            }
+          }).on('error', async (err) => {
+            const time: number = (Date.now() - startTime) / 1000.0
+            if (failedTransactions[err.receipt.transactionHash]) return // we are already aware of this transaction failing.
+            failedTransactions[err.receipt.transactionHash] = time
+            let errMsg = err.message
+            let txHash
+            if (err.reason) errMsg = `transaction reverted with the reason: ${err.reason}`
             const resp: TestResultInterface = {
-              type: 'testPass',
+              type: 'testFailure',
               value: changeCase.sentenceCase(func.name),
               filename: testObject.filename,
               time: time,
+              errMsg,
               context: testName,
-              web3,
-              debugTxHash
+              web3
             }
+            if (err.receipt) txHash = err.receipt.transactionHash
+            else if (err.message.includes('Transaction has been reverted by the EVM')) {
+              txHash = JSON.parse(err.message.replace('Transaction has been reverted by the EVM:', '')).transactionHash
+            }
+            if (web3.remix && web3.remix.getHHLogsForTx && txHash) hhLogs = await web3.remix.getHHLogsForTx(txHash)
             if (hhLogs && hhLogs.length) resp.hhLogs = hhLogs
+            resp.debugTxHash = txHash
             testCallback(undefined, resp)
-            passingNum += 1
+            failureNum += 1
             timePassed += time
-          } else if (hhLogs && hhLogs.length) {
-            const resp: TestResultInterface = {
-              type: 'logOnly',
-              value: changeCase.sentenceCase(func.name),
-              filename: testObject.filename,
-              time: time,
-              context: testName,
-              hhLogs
-            }
-            testCallback(undefined, resp)
-            timePassed += time
-          }
-
-          return next()
-        } catch (err) {
-          console.error(err)
-          return next(err)
-        }
-      }).on('error', async (err) => {
-        const time: number = (Date.now() - startTime) / 1000.0
-        if (failedTransactions[err.receipt.transactionHash]) return // we are already aware of this transaction failing.
-        failedTransactions[err.receipt.transactionHash] = time
-        let errMsg = err.message
-        let txHash
-        if (err.reason) errMsg = `transaction reverted with the reason: ${err.reason}`
-        const resp: TestResultInterface = {
-          type: 'testFailure',
-          value: changeCase.sentenceCase(func.name),
-          filename: testObject.filename,
-          time: time,
-          errMsg,
-          context: testName,
-          web3
-        }
-        if (err.receipt) txHash = err.receipt.transactionHash
-        else if (err.message.includes('Transaction has been reverted by the EVM')) {
-          txHash = JSON.parse(err.message.replace('Transaction has been reverted by the EVM:', '')).transactionHash
-        }
-        if (web3.remix && web3.remix.getHHLogsForTx && txHash) hhLogs = await web3.remix.getHHLogsForTx(txHash)
-        if (hhLogs && hhLogs.length) resp.hhLogs = hhLogs
-        resp.debugTxHash = txHash
-        testCallback(undefined, resp)
-        failureNum += 1
-        timePassed += time
-        return next()
+            return next()
+          })
+        }).catch((err) => {
+          console.error('Error retrieving gas price:', err)
+          return resultsCallback(new Error('Error retrieving gas price: ' + err.message), { passingNum, failureNum, timePassed })
+        })
+      }).catch((err) => {
+        console.error('Error estimating gas:', err)
+        return resultsCallback(new Error('Error estimating gas: ' + err.message), { passingNum, failureNum, timePassed })
       })
     }
   }, function (error) {
