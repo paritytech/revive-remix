@@ -105,7 +105,6 @@ export class CompilerMetadata extends Plugin {
     content = content || '{}'
     const fileName = this._JSONFileName(path, contract.name)
     const metadataFileName = this._MetadataFileName(path, contract.name)
-
     let metadata
     try {
       metadata = JSON.parse(content)
@@ -120,7 +119,7 @@ export class CompilerMetadata extends Plugin {
 
     let parsedMetadata
     try {
-      parsedMetadata = contract.object && contract.object.metadata ? JSON.parse(contract.object.metadata) : null
+      parsedMetadata = contract.object && contract.object.metadata && contract.object.metadata.solc_metadata ? JSON.parse(contract.object.metadata.solc_metadata) : null
     } catch (e) {
       console.log(e)
     }
