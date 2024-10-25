@@ -36,7 +36,7 @@ This document describes how to configure and use REMIX IDE with the Westend netw
 ### 4. Deploy to Westend
 
 - Confirm that the **Westend Testnet - MetaMask** provider is selected in the **Deploy & Run** tab.
-- Click **Deploy** and sign the transaction in MetaMask.
+- Click **Deploy** and confirm the transaction in MetaMask.
 - Wait for the deployment to complete, as indicated in the terminal panel.
 
 ### 5. Interact with Deployed Contracts
