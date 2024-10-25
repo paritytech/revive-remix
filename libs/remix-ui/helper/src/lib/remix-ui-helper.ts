@@ -1,4 +1,6 @@
 import { bytesToHex, toChecksumAddress } from '@ethereumjs/util'
+import { encodeAddress } from '@polkadot/util-crypto';
+import { hexToU8a, u8aConcat, u8aToHex } from '@polkadot/util';
 
 export const extractNameFromKey = (key: string): string => {
   if (!key) return
@@ -86,6 +88,15 @@ export const getPathIcon = (path: string) => {
 
 export const isNumeric = (value) => {
   return /^\+?(0|[1-9]\d*)$/.test(value)
+}
+
+export const addressToSS58 = (address) => {
+  // Remove '0x' prefix
+  const ethAddress = address.slice(2);
+  const ethAddressBytes = hexToU8a(ethAddress);
+  // Pad the address to 32 bytes with `0xEE`
+  const paddedAddress = u8aConcat(ethAddressBytes, new Uint8Array(32 - ethAddressBytes.length).fill(0xEE));
+  return encodeAddress(paddedAddress, 42);
 }
 
 export const shortenAddress = (address, etherBalance?) => {

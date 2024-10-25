@@ -109,6 +109,8 @@
     "@openzeppelin/contracts": "^5.0.0",
     "@openzeppelin/upgrades-core": "^1.30.0",
     "@openzeppelin/wizard": "0.4.0",
+    "@polkadot/util": "^13.2.1",
+    "@polkadot/util-crypto": "^13.2.1",
     "@reduxjs/toolkit": "^2.0.1",
     "@remixproject/engine": "0.3.42",
     "@remixproject/engine-electron": "0.3.42",
