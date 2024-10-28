@@ -362,7 +362,8 @@ export class CodeParser extends Plugin {
     for (const name in contracts) {
       if (name === contractName) {
         const contract = contracts[name]
-        const estimationObj = contract.evm && contract.evm.gasEstimates
+        // const estimationObj = contract.evm && contract.evm.gasEstimates
+        const estimationObj = null;
 
         let executionCost = null
         if (node.nodeType === 'FunctionDefinition') {

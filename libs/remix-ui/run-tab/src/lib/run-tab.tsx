@@ -365,7 +365,7 @@ export function RunTabUI(props: RunTabProps) {
                 network: runTab.networkName,
                 devdoc: object.devdoc,
                 methodIdentifiers: object.evm.methodIdentifiers,
-                solcVersion: JSON.parse(metadata).compiler.version,
+                solcVersion: JSON.parse(metadata.solc_metadata).compiler.version,
               })
             }}
           />

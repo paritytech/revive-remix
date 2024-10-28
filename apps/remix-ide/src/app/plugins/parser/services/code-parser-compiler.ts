@@ -158,7 +158,7 @@ export default class CodeParserCompiler {
             "outputSelection": {
               "*": {
                 "": ["ast"],
-                "*": ["evm.gasEstimates"]
+                // "*": ["evm.gasEstimates"]
               }
             },
             "evmVersion": state.evmVersion && state.evmVersion.toString() || "berlin",

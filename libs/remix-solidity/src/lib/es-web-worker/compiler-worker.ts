@@ -8,24 +8,29 @@ self.onmessage = (e: MessageEvent) => {
   switch (data.cmd) {
   case 'loadVersion':
   {
-    (self as any).importScripts(data.data)
-    const compiler = setupMethods(self)
-    compileJSON = (input) => {
-      try {
-        const missingInputsCallback = (path) => {
-          missingInputs.push(path)
-          return { error: 'Deferred import' }
+    try {
+      (self as any).importScripts(data.data)
+      const compiler = setupMethods(self)
+      compileJSON = (input) => {
+        try {
+          const missingInputsCallback = (path) => {
+            missingInputs.push(path)
+            return { error: 'Deferred import' }
+          }
+          return compiler.compile(input, { import: missingInputsCallback })
+        } catch (exception) {
+          return JSON.stringify({ error: 'Uncaught JavaScript exception:\n' + exception })
         }
-        return compiler.compile(input, { import: missingInputsCallback })
-      } catch (exception) {
-        return JSON.stringify({ error: 'Uncaught JavaScript exception:\n' + exception })
       }
+
+      self.postMessage({
+        cmd: 'versionLoaded',
+        data: compiler.version(),
+        license: compiler.license()
+      })
+    } catch(e) {
+      throw new Error('Remix initialization failed. Please reload the Remix IDE in your browser.')
     }
-    self.postMessage({
-      cmd: 'versionLoaded',
-      data: compiler.version(),
-      license: compiler.license()
-    })
     break
   }
 

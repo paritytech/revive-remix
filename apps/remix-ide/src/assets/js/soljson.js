@@ -45,7 +45,6 @@ async function proxyAsync(path, cmd, input) {
 }
 
 self.onmessage = async function (e) {
-  console.log('soljson.js received message', e.data);
   try {
     if (e.data.cmd === 'compile') {
       let result = await proxyAsync('/resolc', '--standard-json', e.data.input);
