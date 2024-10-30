@@ -7482,10 +7482,6 @@
                 "npm:css-minimizer-webpack-plugin",
                 "npm:child_process"
               ]
-            },
-            {
-              "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "2801d8600ad9e61805ea9c8a265900cf64637a9e"
             }
           ]
         }
