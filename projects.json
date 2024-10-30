@@ -807,7 +807,7 @@
             },
             {
               "file": "libs/remix-ws-templates/src/templates/remixDefault/scripts/web3-lib.ts",
-              "hash": "cbd4f48489b5fcf71dce1c4394c520086176d561",
+              "hash": "676e94e842930be2dcbd3ff0c35c788b21af84e2",
               "deps": [
                 "npm:web3",
                 "npm:web3-eth-contract"
@@ -819,10 +819,10 @@
             },
             {
               "file": "libs/remix-ws-templates/src/templates/remixDefault/tests/storage.test.js",
-              "hash": "8e37b7c39b76b12519a9f931ba858624e573e1f7",
+              "hash": "5eadec8aa418bb21aec39a51c2cff9b6086362ca",
               "deps": [
                 "npm:chai",
-                "npm:hardhat"
+                "npm:ethers"
               ]
             },
             {
@@ -1301,7 +1301,7 @@
             },
             {
               "file": "libs/remix-core-plugin/src/lib/compiler-metadata.ts",
-              "hash": "10fdf7a06ab0b7ab68aba9c6b4dbcd3be2284db4",
+              "hash": "86f2888d3515b2489fef9a44097e5c6f5566beb5",
               "deps": [
                 "npm:@remixproject/engine"
               ]
@@ -3048,7 +3048,7 @@
             },
             {
               "file": "libs/remix-solidity/src/lib/es-web-worker/compiler-worker.ts",
-              "hash": "60852272fb6ab65d75d2e5a685ed1b0806088684",
+              "hash": "216a4edb7bbec537592306f474cfae32db0cef6d",
               "deps": [
                 "npm:solc"
               ]
@@ -4028,7 +4028,7 @@
             },
             {
               "file": "libs/remix-tests/src/deployer.ts",
-              "hash": "991847a051487eac6d4e19a90ee98dc331f5a816",
+              "hash": "0822064bfc6815a6a2c50bd3dd1e57db8032cef2",
               "deps": [
                 "npm:async",
                 "npm:web3"
@@ -4075,7 +4075,7 @@
             },
             {
               "file": "libs/remix-tests/src/runTestSources.ts",
-              "hash": "7b97b2851c912bb76a3dcea0c89c5e433faee112",
+              "hash": "f7be678ab97d1b2a9e352d0138cf5296bf2ccd01",
               "deps": [
                 "npm:async",
                 "npm:web3",
@@ -4085,7 +4085,7 @@
             },
             {
               "file": "libs/remix-tests/src/testRunner.ts",
-              "hash": "6dcdf239b0bafa0be2ee2726321563de3ddfe123",
+              "hash": "74d6142b003cb4c2ffa28e16788fba6cc8e72a4e",
               "deps": [
                 "npm:async",
                 "npm:change-case",
@@ -5845,7 +5845,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/plugins/parser/code-parser.tsx",
-              "hash": "b4c7b181f0aecb0bc22929b813ad4dcd7a89fdb2",
+              "hash": "55ebfcb4e7f41e41cd15385a56aa37bf921e55dc",
               "deps": [
                 "npm:@remixproject/engine",
                 "npm:react",
@@ -5866,7 +5866,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/plugins/parser/services/code-parser-compiler.ts",
-              "hash": "6f1d5f91527ced821bf9712bbbd92dbc10cc1fcb",
+              "hash": "7912e6bbf8a5b9d0fd129c5221996d13734a00e1",
               "deps": [
                 "npm:@remixproject/plugin-api"
               ]
@@ -6095,6 +6095,10 @@
             {
               "file": "apps/remix-ide/src/app/providers/injected-skale-chaos-testnet-provider.tsx",
               "hash": "c5da299f76ec22c36256f7708e8955cb2ccfb1dc"
+            },
+            {
+              "file": "apps/remix-ide/src/app/providers/injected-westend-provider.tsx",
+              "hash": "1ac27bafcdcfae9d307c3fd56982448bad3c1a86"
             },
             {
               "file": "apps/remix-ide/src/app/providers/mainnet-vm-fork-provider.tsx",
@@ -6745,7 +6749,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/test-tab.js",
-              "hash": "1f5208287cc41a96b6d28114941d0af5ec52d23a",
+              "hash": "1a7336a7a8873b7c23efeeb84a3b94805001116c",
               "deps": [
                 "npm:react",
                 "npm:@remixproject/engine-web"
@@ -7282,7 +7286,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/js/metadata.json",
-              "hash": "99e5c1d802a0d3d8acafac188676158c792007b1"
+              "hash": "3f6a2da862ed4fa3211eb0a65fa857c326421e6c"
             },
             {
               "file": "apps/remix-ide/src/assets/js/parser/antlr.js",
@@ -7298,7 +7302,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/js/soljson.js",
-              "hash": "e7aeaeea7fd207b7761c7a89d2fad1d382ad6b7b"
+              "hash": "6909a63faa37036960e48e057a8040dcf5f08ced"
             },
             {
               "file": "apps/remix-ide/src/assets/list.json",
@@ -7306,7 +7310,7 @@
             },
             {
               "file": "apps/remix-ide/src/blockchain/blockchain.tsx",
-              "hash": "889094c1968aa18613d05921737bbf4e66aab46d",
+              "hash": "05184d918b033745aeaaa9b1910102d39a695cf4",
               "deps": [
                 "npm:react",
                 "npm:web3-utils",
@@ -7481,11 +7485,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "ec2dc722346a8045044345ae6fa8b9e9bb767e11"
-            },
-            {
-              "file": "apps/remix-ide/src/app/providers/injected-westend-provider.tsx",
-              "hash": "1ac27bafcdcfae9d307c3fd56982448bad3c1a86"
+              "hash": "2801d8600ad9e61805ea9c8a265900cf64637a9e"
             }
           ]
         }
@@ -7624,7 +7624,7 @@
             },
             {
               "file": "libs/remix-lib/src/execution/txFormat.ts",
-              "hash": "d06f4061c49d666420fd7cbee58b154313131450",
+              "hash": "26c024065180aa15158f72948a85e4b62bcb7e55",
               "deps": [
                 "npm:ethers",
                 "npm:async",
@@ -9604,9 +9604,11 @@
             },
             {
               "file": "libs/remix-ui/helper/src/lib/remix-ui-helper.ts",
-              "hash": "ac51759f6a8f6cb7ff1cf3e76254225ef460ea9d",
+              "hash": "9ac7ab27f60a1d345c169f730559f5ca5423db4a",
               "deps": [
-                "npm:@ethereumjs/util"
+                "npm:@ethereumjs/util",
+                "npm:@polkadot/util-crypto",
+                "npm:@polkadot/util"
               ]
             },
             {
@@ -10096,7 +10098,7 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/components/account.tsx",
-              "hash": "d7097a1ab0f44c47efdd77cb1b50c6754fa4939b",
+              "hash": "f5c5263f23c06bfb3fe6f4d210f52b92511f9271",
               "deps": [
                 "npm:react",
                 "npm:react-intl"
@@ -10210,7 +10212,7 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/components/settingsUI.tsx",
-              "hash": "d3d8ed59577fba93a94c0ebe655dd3ba9ac7e6dc",
+              "hash": "3f628e37cb87ebc528a62f61d94ce83c1860b8ed",
               "deps": [
                 "npm:react"
               ]
@@ -10248,11 +10250,11 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/reducers/runTab.ts",
-              "hash": "8c40794ab474e46cf233806634e23fc39e288726"
+              "hash": "eca7e703ccd7b7cd9be0fe27723358e563faf329"
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/run-tab.tsx",
-              "hash": "403c13b24b7bd6fa070d0d0fff9c0bba852ea4e9",
+              "hash": "f3c8c4c03d373d9f0efbbc25888c662ce50f0f94",
               "deps": [
                 "npm:react",
                 "npm:semver",
@@ -10277,7 +10279,7 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/types/index.ts",
-              "hash": "c5b7efa94e924722034faf2fbd7c171449cea5e6",
+              "hash": "f7a95c39218cbc179aa713517a421392faf6660c",
               "deps": [
                 "npm:react",
                 "npm:@openzeppelin/upgrades-core"
@@ -10675,7 +10677,7 @@
             },
             {
               "file": "libs/remix-ui/solidity-unit-testing/src/lib/solidity-unit-testing.tsx",
-              "hash": "bfe36bfdf7a49608f2fcbb867b2a548a0147f15a",
+              "hash": "a0f9e206d36e17064a7629c6a108929612936bcf",
               "deps": [
                 "npm:react",
                 "npm:react-intl",
