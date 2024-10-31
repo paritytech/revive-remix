@@ -6098,7 +6098,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/providers/injected-westend-provider.tsx",
-              "hash": "1ac27bafcdcfae9d307c3fd56982448bad3c1a86"
+              "hash": "047b82399fac1d4546635fa39ce5651a09e67c8a"
             },
             {
               "file": "apps/remix-ide/src/app/providers/mainnet-vm-fork-provider.tsx",
@@ -7482,6 +7482,10 @@
                 "npm:css-minimizer-webpack-plugin",
                 "npm:child_process"
               ]
+            },
+            {
+              "file": "apps/remix-ide/src/assets/version.json",
+              "hash": "8b02c39f742f52b712a597f36a12b30ad5e134e0"
             }
           ]
         }
