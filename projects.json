@@ -6098,7 +6098,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/providers/injected-westend-provider.tsx",
-              "hash": "047b82399fac1d4546635fa39ce5651a09e67c8a"
+              "hash": "ee93bbde5ebca5f881a8f9e930edb265fbd0aa07"
             },
             {
               "file": "apps/remix-ide/src/app/providers/mainnet-vm-fork-provider.tsx",
@@ -7485,7 +7485,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "8b02c39f742f52b712a597f36a12b30ad5e134e0"
+              "hash": "1edc77742c56474c4dbe444404901c70fdb476c4"
             }
           ]
         }
