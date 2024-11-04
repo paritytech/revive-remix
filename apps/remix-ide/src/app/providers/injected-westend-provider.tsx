@@ -15,8 +15,8 @@ export class InjectedWestendTestnetProvider extends InjectedCustomProvider {
   constructor () {
     super(profile,
       'Westend Testnet',
-      '0x190f1b44',
-      ['https://westend-asset-hub-eth-rpc.polkadot.io'],
+      '0x190F1B45',
+      ['https://eth-rpc.parity-testnet.parity.io'],
       {
         "name": "Testnet token WND",
         "symbol": "WND",
