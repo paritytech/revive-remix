@@ -6098,7 +6098,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/providers/injected-westend-provider.tsx",
-              "hash": "ee93bbde5ebca5f881a8f9e930edb265fbd0aa07"
+              "hash": "9913b63caedf2db2b2f1087d139c6a1fd1c52bd0"
             },
             {
               "file": "apps/remix-ide/src/app/providers/mainnet-vm-fork-provider.tsx",
@@ -6782,7 +6782,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/udapp/run-tab.js",
-              "hash": "9fbd8326b64db59f549bf8885e8a1701d99b044d",
+              "hash": "38da2eb33def7471393ed5481846155f627d9530",
               "deps": [
                 "npm:react",
                 "npm:@remixproject/engine-web",
@@ -7485,7 +7485,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "1edc77742c56474c4dbe444404901c70fdb476c4"
+              "hash": "fafd57fc4c23a5fb24a561e85855b7b8f63e2acf"
             }
           ]
         }
