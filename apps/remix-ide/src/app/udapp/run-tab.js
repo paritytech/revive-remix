@@ -207,7 +207,7 @@ export class RunTab extends ViewPlugin {
       await addProvider(0, name, displayName, true, false, false)
 
       if (event.detail.info.name === 'MetaMask') {
-        await addCustomInjectedProvider(7, event, 'injected-metamask-westend', 'Westend Testnet - ' + event.detail.info.name, '0x190F1B45', ['https://eth-rpc.parity-testnet.parity.io'],
+        await addCustomInjectedProvider(7, event, 'injected-metamask-westend', 'Westend Testnet - ' + event.detail.info.name, '0x190F1B45', ['https://westend-asset-hub-eth-rpc.polkadot.io'],
           {
             "name": "Testnet token WND",
             "symbol": "WND",
