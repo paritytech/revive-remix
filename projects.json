@@ -6060,7 +6060,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/providers/injected-custom-provider.tsx",
-              "hash": "bb41eeac4ae67a69248f12fdda1b76caf90578ae",
+              "hash": "9cd22226c27b5af7e3206092de0d645d34ea8400",
               "deps": [
                 "npm:web3"
               ]
@@ -6098,7 +6098,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/providers/injected-westend-provider.tsx",
-              "hash": "9913b63caedf2db2b2f1087d139c6a1fd1c52bd0"
+              "hash": "0d3944f56778d8825574efa6d56396cd94f771d7"
             },
             {
               "file": "apps/remix-ide/src/app/providers/mainnet-vm-fork-provider.tsx",
@@ -7310,7 +7310,7 @@
             },
             {
               "file": "apps/remix-ide/src/blockchain/blockchain.tsx",
-              "hash": "05184d918b033745aeaaa9b1910102d39a695cf4",
+              "hash": "ce5d814395f4e6b92de591397828fbf2494a2338",
               "deps": [
                 "npm:react",
                 "npm:web3-utils",
@@ -7485,7 +7485,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "fafd57fc4c23a5fb24a561e85855b7b8f63e2acf"
+              "hash": "3336a2e5c3c3ba6d4d64c4c7e572c2a1d648f16c"
             }
           ]
         }

@@ -21,7 +21,10 @@ export class InjectedWestendTestnetProvider extends InjectedCustomProvider {
         "name": "Testnet token WND",
         "symbol": "WND",
         "decimals": 18
-      }
+      },
+      [
+        'https://assethub-westend.subscan.io'
+      ]
     )
   }
 }

@@ -45,7 +45,7 @@ export const setCustomNetwork = async (chainName: string, chainId: string, rpcUr
             rpcUrls: rpcUrls,
           }
           if (nativeCurrency) paramsObj.nativeCurrency = nativeCurrency
-          if (blockExplorerUrls) paramsObj.blockExplorerUrls = blockExplorerUrls
+          if (blockExplorerUrls) paramsObj.blockExplorerUrls = blockExplorerUrls; else paramsObj.blockExplorerUrls = null
           await (window as any).ethereum.request({
             method: 'wallet_addEthereumChain',
             params: [paramsObj]
