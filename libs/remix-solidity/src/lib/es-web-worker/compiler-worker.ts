@@ -1,3 +1,4 @@
+import setupReviveMethods from './../../compiler/revive'
 import setupMethods from 'solc/wrapper'
 import { CompilerInput, MessageToWorker } from './../../compiler/types'
 let compileJSON: ((input: CompilerInput) => string) | null = (input) => { return '' }
@@ -9,27 +10,32 @@ self.onmessage = (e: MessageEvent) => {
   case 'loadVersion':
   {
     try {
+      let compiler;
       (self as any).importScripts(data.data)
-      const compiler = setupMethods(self)
+      if (typeof (self as any).createRevive === "function") {
+        compiler = setupReviveMethods(self)
+      }
+      else {
+        compiler = setupMethods(self)
+      }
       compileJSON = (input) => {
         try {
           const missingInputsCallback = (path) => {
             missingInputs.push(path)
             return { error: 'Deferred import' }
           }
-          return compiler.compile(input, { import: missingInputsCallback })
+          return compiler.compile(input, missingInputsCallback)
         } catch (exception) {
           return JSON.stringify({ error: 'Uncaught JavaScript exception:\n' + exception })
         }
       }
-
       self.postMessage({
         cmd: 'versionLoaded',
         data: compiler.version(),
         license: compiler.license()
       })
     } catch(e) {
-      throw new Error('Remix initialization failed. Please reload the Remix IDE in your browser.')
+      throw new Error('Remix initialization failed. Please reload the Remix IDE in your browser.' + e)
     }
     break
   }
