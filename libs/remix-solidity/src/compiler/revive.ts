@@ -1,16 +1,44 @@
 import {CompilerInput} from './types'
 
 export default function setupReviveMethods (resolc: any): any {
+  function generateCompilerError(message) {
+    return {
+      sources: {},
+      errors: [
+        {
+          component: 'general',
+          errorCode: '9999',
+          formattedMessage: 'InternalCompilerError: ' + message,
+          message: 'InternalCompilerError: ' + message,
+          severity: 'error',
+          sourceLocation: {
+            file: '',
+            start: -1,
+            end: -1,
+          },
+          type: 'InternalCompilerError',
+        },
+      ],
+    };
+  }
+
   var compile = function compile(input: CompilerInput, readCallback: (path: string) => { error: string } | undefined): string {
       const revive = resolc.createRevive();
       revive.soljson = resolc.Module;
       revive.writeToStdin(input);
       revive.callMain(['--standard-json']);
+      let result: any;
+      let stdErr = revive.readFromStderr();
+      if (stdErr) {
+        result = generateCompilerError(stdErr)
+      }
+      else {
+        let stdOut = revive.readFromStdout()
+        result = JSON.parse(stdOut)
+      }
 
-      let result = revive.readFromStdout() || revive.readFromStderr();
-      let data = JSON.parse(result);
-      if (data.errors) {
-        data.errors.forEach((err) => {
+      if (result.errors) {
+        result.errors.forEach((err) => {
           if (
             err.message &&
             (err.message.includes('File not found') || err.message.includes('File not supplied initially'))
@@ -31,7 +59,7 @@ export default function setupReviveMethods (resolc: any): any {
           }
         });
       }
-      return JSON.stringify(data)
+      return JSON.stringify(result)
   }
 
   var license = function license(): string {
