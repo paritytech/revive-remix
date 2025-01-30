@@ -1,7 +1,7 @@
 import * as semver from 'semver'
 /* global Worker */
 
-export const baseURLBin = 'https://remix-backend.polkadot.io/wasm'
+export const baseURLBin = 'assets/js'
 export const baseURLWasm = baseURLBin
 
 export const pathToURL = {}
