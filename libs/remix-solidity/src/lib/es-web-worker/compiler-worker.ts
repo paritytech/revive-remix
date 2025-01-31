@@ -24,7 +24,7 @@ self.onmessage = (e: MessageEvent) => {
             missingInputs.push(path)
             return { error: 'Deferred import' }
           }
-          return compiler.compile(input, missingInputsCallback)
+          return compiler.compile(input, { import: missingInputsCallback })
         } catch (exception) {
           return JSON.stringify({ error: 'Uncaught JavaScript exception:\n' + exception })
         }
