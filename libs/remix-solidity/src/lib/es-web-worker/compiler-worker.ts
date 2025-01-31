@@ -26,7 +26,13 @@ self.onmessage = (e: MessageEvent) => {
           }
           return compiler.compile(input, { import: missingInputsCallback })
         } catch (exception) {
-          return JSON.stringify({ error: 'Uncaught JavaScript exception:\n' + exception })
+          let errorMessage = 'Uncaught JavaScript exception:\n' + exception;
+
+          if (exception.message.includes('out of memory') && !navigator.userAgent.includes('Chrome')) {
+            errorMessage += '\nTry running this in the Chrome browser';
+          }
+
+          return JSON.stringify({ error: errorMessage });
         }
       }
       self.postMessage({
