@@ -28,7 +28,7 @@ self.onmessage = (e: MessageEvent) => {
         } catch (exception) {
           let errorMessage = 'Uncaught JavaScript exception:\n' + exception;
 
-          if (exception.message.includes('out of memory') && !navigator.userAgent.includes('Chrome')) {
+          if (!navigator.userAgent.includes('Chrome')) {
             errorMessage += '\nTry running this in the Chrome browser';
           }
 
