@@ -3055,7 +3055,7 @@
             },
             {
               "file": "libs/remix-solidity/src/lib/es-web-worker/compiler-worker.ts",
-              "hash": "31cefc9f74dc2a874ad671f30c06d76033fe53e2",
+              "hash": "8c5fea4a4a3f7bb9afccef5f68519617ecb0bc35",
               "deps": [
                 "npm:solc"
               ]
@@ -7492,7 +7492,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "56af2aca80fda1c6b6be2ad0a86cbdbf7c840c6c"
+              "hash": "0f118c5c2660738b471a9d5d08ea3c95fc5e097c"
             },
             {
               "file": "apps/remix-ide/src/assets/js/soljson-v0.8.28-js+commit.7893614a-revive-0.1.0-dev.8.js",
