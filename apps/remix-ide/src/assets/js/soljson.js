@@ -6,7 +6,7 @@ function getBackendUrl() {
   // Staging backend
   // return 'https://remix-backend.parity-stg.parity.io'
   // Production backend
-  return 'https://remix-backend.polkadot.io'
+  return 'https://remix-backend.polkadot.io';
 }
 
 // synchronous fetch
