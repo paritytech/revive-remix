@@ -91,8 +91,8 @@ export const isNumeric = (value) => {
 }
 
 export const addressToSS58 = (address) => {
-  // Remove '0x' prefix
-  const ethAddress = address.slice(2);
+  if (!address) return null
+  const ethAddress = address.startsWith('0x') ? address.slice(2) : address;
   const ethAddressBytes = hexToU8a(ethAddress);
   // Pad the address to 32 bytes with `0xEE`
   const paddedAddress = u8aConcat(ethAddressBytes, new Uint8Array(32 - ethAddressBytes.length).fill(0xEE));
