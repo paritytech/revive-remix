@@ -198,7 +198,9 @@ export const createInstance = async (
   const currentParams = !isProxyDeployment && !isContractUpgrade ? args : ''
   let overSize
   try {
-    overSize = await selectedContract.isOverSizeLimit(currentParams)
+    // FIXME: Disabled the contract size check until we have the final chains configuration
+    overSize = null;
+    //overSize = await selectedContract.isOverSizeLimit(currentParams)
   } catch (error) {
     return statusCb(`creation of ${selectedContract.name} errored: ${error.message ? error.message : error}`)
   }
