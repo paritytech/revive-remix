@@ -7285,7 +7285,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/js/list.json",
-              "hash": "d4059185bf7028c9fa1f31e74a93e943ab78b23f"
+              "hash": "70a8cbb63176ee23fc997b26a2e10dc9c6821b4c"
             },
             {
               "file": "apps/remix-ide/src/assets/js/loader.js",
@@ -7306,6 +7306,18 @@
             {
               "file": "apps/remix-ide/src/assets/js/parser/Solidity-EZVQ6AE4.tokens",
               "hash": "ffb4652613710d664b37e56944fd6b290e40431b"
+            },
+            {
+              "file": "apps/remix-ide/src/assets/js/revive-0.1.0-dev.10.wasm",
+              "hash": "5cd51c1a855d059ac4eb773e46856103de3ba4da"
+            },
+            {
+              "file": "apps/remix-ide/src/assets/js/soljson-v0.8.28-js+commit.7893614a-revive-0.1.0-dev.10.js",
+              "hash": "1c0a1edad4694858db9966226753b54cd736a924"
+            },
+            {
+              "file": "apps/remix-ide/src/assets/js/soljson-v0.8.28+commit.7893614a-revive-remix-backend.js",
+              "hash": "83a161aaefe838c02f4d49dcdb491e4e3f5e54b6"
             },
             {
               "file": "apps/remix-ide/src/assets/js/soljson.js",
@@ -7492,19 +7504,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "0f118c5c2660738b471a9d5d08ea3c95fc5e097c"
-            },
-            {
-              "file": "apps/remix-ide/src/assets/js/soljson-v0.8.28-js+commit.7893614a-revive-0.1.0-dev.8.js",
-              "hash": "647642eed05c3a5eb2ffa76a444d7d002533cd25"
-            },
-            {
-              "file": "apps/remix-ide/src/assets/js/soljson-v0.8.28+commit.7893614a-revive-remix-backend.js",
-              "hash": "83a161aaefe838c02f4d49dcdb491e4e3f5e54b6"
-            },
-            {
-              "file": "apps/remix-ide/src/assets/js/revive-0.1.0-dev.8.wasm",
-              "hash": "1ff195e5b681d2493b3e69d70ab68955e7fc8b55"
+              "hash": "eec9cb1ee460fd4ce34623d134da5c3b1a0104bf"
             }
           ]
         }
@@ -9623,7 +9623,7 @@
             },
             {
               "file": "libs/remix-ui/helper/src/lib/remix-ui-helper.ts",
-              "hash": "9ac7ab27f60a1d345c169f730559f5ca5423db4a",
+              "hash": "5a739c98a2213ff2386c1487ca357335e3a7209b",
               "deps": [
                 "npm:@ethereumjs/util",
                 "npm:@polkadot/util-crypto",
@@ -10084,7 +10084,7 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/actions/deploy.ts",
-              "hash": "a1375b473d8bc15ebcedaba4f12bea873c58983f",
+              "hash": "31b2fef3b6fac261d97456ddc20fde2c0818ef5f",
               "deps": [
                 "npm:@openzeppelin/upgrades-core",
                 "npm:web3"
