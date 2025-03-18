@@ -231,9 +231,6 @@ export function AccountUI(props: AccountProps) {
           ))}
         </select>
       </div>
-      <div className="">
-        <span className="udapp_network badge badge-secondary">{props.ss58address}</span>
-      </div>
     </div>
   )
 }

@@ -149,8 +149,7 @@ export class RunTab extends ViewPlugin {
       'injected-metamask-optimism': 'Deploy to Optimism through the Metamask browser extension.',
       'injected-metamask-arbitrum': 'Deploy to Arbitrum through the Metamask browser extension.',
       'injected-metamask-sepolia': 'Deploy to the Sepolia testnet through the Metamask browser extension.',
-      'injected-metamask-ephemery': 'Deploy to the Ephemery testnet through the Metamask browser extension.',
-      'injected-metamask-westend': 'Deploy to Westend testnet through the Metamask browser extension.'
+      'injected-metamask-ephemery': 'Deploy to the Ephemery testnet through the Metamask browser extension.'
     }
 
     const logos = {
@@ -163,8 +162,7 @@ export class RunTab extends ViewPlugin {
       'injected-Trust Wallet': ['assets/img/trust-wallet.png'],
       'hardhat-provider': ['assets/img/hardhat.png'],
       'walletconnect': ['assets/img/Walletconnect-logo.png'],     
-      'foundry-provider': ['assets/img/foundry.png'],
-      'injected-metamask-westend': ['assets/img/metamask.png']
+      'foundry-provider': ['assets/img/foundry.png']
     }
 
     const addProvider = async (position, name, displayName, isInjected, isVM, fork = '', dataId = '', title = '') => {
@@ -207,12 +205,6 @@ export class RunTab extends ViewPlugin {
       await addProvider(0, name, displayName, true, false, false)
 
       if (event.detail.info.name === 'MetaMask') {
-        await addCustomInjectedProvider(7, event, 'injected-metamask-westend', 'Westend Testnet - ' + event.detail.info.name, '0x190F1B45', ['https://westend-asset-hub-eth-rpc.polkadot.io'],
-          {
-            "name": "Testnet token WND",
-            "symbol": "WND",
-            "decimals": 18
-          })
         /*await addCustomInjectedProvider(7, event, 'injected-metamask-optimism', 'L2 - Optimism - ' + event.detail.info.name, '0xa', ['https://mainnet.optimism.io'])
         await addCustomInjectedProvider(8, event, 'injected-metamask-arbitrum', 'L2 - Arbitrum - ' + event.detail.info.name, '0xa4b1', ['https://arb1.arbitrum.io/rpc'])    
         await addCustomInjectedProvider(5, event, 'injected-metamask-sepolia', 'Sepolia Testnet - ' + event.detail.info.name, '0xaa36a7', [],

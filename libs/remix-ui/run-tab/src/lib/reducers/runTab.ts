@@ -1,5 +1,4 @@
 import { ContractData } from '@remix-project/core-plugin'
-import { addressToSS58 } from '@remix-ui/helper'
 import { ContractList, DeployOptions, RunTabState } from '../types'
 import { ADD_INSTANCE, ADD_PINNED_INSTANCE, UPDATE_INSTANCES_BALANCE, ADD_PROVIDER, CLEAR_INSTANCES, CLEAR_PINNED_INSTANCES, CLEAR_RECORDER_COUNT, DISPLAY_NOTIFICATION, DISPLAY_POPUP_MESSAGE, FETCH_ACCOUNTS_LIST_FAILED, FETCH_ACCOUNTS_LIST_REQUEST, FETCH_ACCOUNTS_LIST_SUCCESS, FETCH_CONTRACT_LIST_FAILED, FETCH_CONTRACT_LIST_REQUEST, FETCH_CONTRACT_LIST_SUCCESS, FETCH_PROVIDER_LIST_FAILED, FETCH_PROVIDER_LIST_REQUEST, FETCH_PROVIDER_LIST_SUCCESS, HIDE_NOTIFICATION, HIDE_POPUP_MESSAGE, REMOVE_INSTANCE, REMOVE_PROVIDER, RESET_STATE, SET_BASE_FEE_PER_GAS, SET_CONFIRM_SETTINGS, SET_CHAIN_ID, SET_CURRENT_CONTRACT, SET_CURRENT_FILE, SET_DECODED_RESPONSE, SET_DEPLOY_OPTIONS, SET_EXECUTION_ENVIRONMENT, SET_EXTERNAL_WEB3_ENDPOINT, SET_GAS_LIMIT, SET_GAS_PRICE, SET_GAS_PRICE_STATUS, SET_IPFS_CHECKED_STATE, SET_LOAD_TYPE, SET_MATCH_PASSPHRASE, SET_MAX_FEE, SET_MAX_PRIORITY_FEE, SET_NETWORK_NAME, SET_PASSPHRASE, SET_PATH_TO_SCENARIO, SET_PERSONAL_MODE, SET_RECORDER_COUNT, SET_SELECTED_ACCOUNT, SET_SEND_UNIT, SET_SEND_VALUE, ADD_DEPLOY_OPTION, REMOVE_DEPLOY_OPTION, SET_REMIXD_ACTIVATED, FETCH_PROXY_DEPLOYMENTS, NEW_PROXY_DEPLOYMENT, RESET_PROXY_DEPLOYMENTS, EXTRACT_COMPILER_VERSION } from '../constants'
 
@@ -17,7 +16,6 @@ export const runTabInitialState: RunTabState = {
     error: null,
     selectedAccount: ''
   },
-  ss58address: '',
   sendValue: '0',
   sendUnit: 'wei',
   gasLimit: 0,
@@ -140,9 +138,7 @@ export const runTabReducer = (state: RunTabState = runTabInitialState, action: A
       accounts: {
         ...state.accounts,
         selectedAccount: payload
-      },
-      // TODO: Add support for other networks
-      ss58address: addressToSS58(payload)
+      }
     }
   }
 
@@ -175,8 +171,7 @@ export const runTabReducer = (state: RunTabState = runTabInitialState, action: A
         ...state.accounts,
         selectedAccount: '',
         loadedAccounts: {}
-      },
-      ss58address: ''
+      }
     }
   }
 

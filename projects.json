@@ -6104,10 +6104,6 @@
               "hash": "c5da299f76ec22c36256f7708e8955cb2ccfb1dc"
             },
             {
-              "file": "apps/remix-ide/src/app/providers/injected-westend-provider.tsx",
-              "hash": "0d3944f56778d8825574efa6d56396cd94f771d7"
-            },
-            {
               "file": "apps/remix-ide/src/app/providers/mainnet-vm-fork-provider.tsx",
               "hash": "545f70000ed49a28153e376ea948f6b108a23b0d"
             },
@@ -6789,7 +6785,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/udapp/run-tab.js",
-              "hash": "38da2eb33def7471393ed5481846155f627d9530",
+              "hash": "45b682ded26e1813e60f92ccbf5e42c30c547fa1",
               "deps": [
                 "npm:react",
                 "npm:@remixproject/engine-web",
@@ -7285,7 +7281,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/js/list.json",
-              "hash": "70a8cbb63176ee23fc997b26a2e10dc9c6821b4c"
+              "hash": "1564232e980849d6c8d9377d5f8cbda9539d8ded"
             },
             {
               "file": "apps/remix-ide/src/assets/js/loader.js",
@@ -7308,20 +7304,16 @@
               "hash": "ffb4652613710d664b37e56944fd6b290e40431b"
             },
             {
-              "file": "apps/remix-ide/src/assets/js/revive-0.1.0-dev.10.wasm",
-              "hash": "5cd51c1a855d059ac4eb773e46856103de3ba4da"
+              "file": "apps/remix-ide/src/assets/js/revive-0.1.0-dev.12.wasm",
+              "hash": "870e76303bb93aab65e701d7df893305e0dc7066"
             },
             {
-              "file": "apps/remix-ide/src/assets/js/soljson-v0.8.28-js+commit.7893614a-revive-0.1.0-dev.10.js",
-              "hash": "1c0a1edad4694858db9966226753b54cd736a924"
-            },
-            {
-              "file": "apps/remix-ide/src/assets/js/soljson-v0.8.28+commit.7893614a-revive-remix-backend.js",
-              "hash": "83a161aaefe838c02f4d49dcdb491e4e3f5e54b6"
+              "file": "apps/remix-ide/src/assets/js/soljson-v0.8.28+commit.7893614a-revive-0.1.0-dev.12.js",
+              "hash": "1c9d8b2f9117aefcf313ea08065b7a712d750bec"
             },
             {
               "file": "apps/remix-ide/src/assets/js/soljson.js",
-              "hash": "83a161aaefe838c02f4d49dcdb491e4e3f5e54b6"
+              "hash": "1c9d8b2f9117aefcf313ea08065b7a712d750bec"
             },
             {
               "file": "apps/remix-ide/src/assets/list.json",
@@ -7329,7 +7321,7 @@
             },
             {
               "file": "apps/remix-ide/src/blockchain/blockchain.tsx",
-              "hash": "ce5d814395f4e6b92de591397828fbf2494a2338",
+              "hash": "f3ecd0d7b3a3865170690fe8502a89dae2e009f3",
               "deps": [
                 "npm:react",
                 "npm:web3-utils",
@@ -7504,7 +7496,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "eec9cb1ee460fd4ce34623d134da5c3b1a0104bf"
+              "hash": "45219de90c9adc4e8c2f7c080cf2cbfcdd89d7aa"
             }
           ]
         }
@@ -9623,11 +9615,9 @@
             },
             {
               "file": "libs/remix-ui/helper/src/lib/remix-ui-helper.ts",
-              "hash": "5a739c98a2213ff2386c1487ca357335e3a7209b",
+              "hash": "ac51759f6a8f6cb7ff1cf3e76254225ef460ea9d",
               "deps": [
-                "npm:@ethereumjs/util",
-                "npm:@polkadot/util-crypto",
-                "npm:@polkadot/util"
+                "npm:@ethereumjs/util"
               ]
             },
             {
@@ -10117,7 +10107,7 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/components/account.tsx",
-              "hash": "f5c5263f23c06bfb3fe6f4d210f52b92511f9271",
+              "hash": "d7097a1ab0f44c47efdd77cb1b50c6754fa4939b",
               "deps": [
                 "npm:react",
                 "npm:react-intl"
@@ -10231,7 +10221,7 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/components/settingsUI.tsx",
-              "hash": "3f628e37cb87ebc528a62f61d94ce83c1860b8ed",
+              "hash": "d3d8ed59577fba93a94c0ebe655dd3ba9ac7e6dc",
               "deps": [
                 "npm:react"
               ]
@@ -10269,11 +10259,11 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/reducers/runTab.ts",
-              "hash": "eca7e703ccd7b7cd9be0fe27723358e563faf329"
+              "hash": "8c40794ab474e46cf233806634e23fc39e288726"
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/run-tab.tsx",
-              "hash": "f3c8c4c03d373d9f0efbbc25888c662ce50f0f94",
+              "hash": "d71167b2ee7b5c15524ec91a040ec9098bab35ef",
               "deps": [
                 "npm:react",
                 "npm:semver",
@@ -10298,7 +10288,7 @@
             },
             {
               "file": "libs/remix-ui/run-tab/src/lib/types/index.ts",
-              "hash": "f7a95c39218cbc179aa713517a421392faf6660c",
+              "hash": "c5b7efa94e924722034faf2fbd7c171449cea5e6",
               "deps": [
                 "npm:react",
                 "npm:@openzeppelin/upgrades-core"
