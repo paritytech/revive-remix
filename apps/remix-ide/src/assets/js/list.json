@@ -1,23 +1,15 @@
 {
     "builds": [
       {
-        "path": "soljson-v0.8.28-js+commit.7893614a-revive-0.1.0-dev.10.js",
-        "version": "0.8.28-js",
-        "longVersion": "0.8.28-js+commit.7893614a-revive-0.1.0-dev.10",
-        "urls": [
-        ]
-      },
-      {
-        "path": "soljson-v0.8.28+commit.7893614a-revive-remix-backend.js",
+        "path": "soljson-v0.8.28+commit.7893614a-revive-0.1.0-dev.12.js",
         "version": "0.8.28",
-        "longVersion": "0.8.28+commit.7893614a-revive-remix-backend",
+        "longVersion": "0.8.28+commit.7893614a-revive-0.1.0-dev.12",
         "urls": [
         ]
       }
     ],
     "releases": {
-       "0.8.28-js": "soljson-v0.8.28-js+commit.7893614a-revive-0.1.0-dev.10.js",
-       "0.8.28": "soljson-v0.8.28+commit.7893614a-revive-remix-backend.js"
+       "0.8.28": "soljson-v0.8.28+commit.7893614a-revive-0.1.0-dev.12.js"
     },
-    "latestRelease": "0.8.28-js"
+    "latestRelease": "0.8.28"
   }

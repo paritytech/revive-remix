@@ -45,7 +45,6 @@ export interface RunTabState {
     error: string,
     selectedAccount: string
   },
-  ss58address: string,
   sendValue: string,
   sendUnit: 'ether' | 'finney' | 'gwei' | 'wei',
   gasLimit: number,
@@ -142,7 +141,6 @@ export interface SettingsProps {
     error: string
   },
   setAccount: (account: string) => void,
-  ss58address: string,
   setUnit: (unit: 'ether' | 'finney' | 'gwei' | 'wei') => void,
   sendValue: string,
   sendUnit: string,
@@ -200,7 +198,6 @@ export interface AccountProps {
   modal: (title: string, message: string | JSX.Element, okLabel: string, okFn: () => void, cancelLabel?: string, cancelFn?: () => void, okBtnClass?: string, cancelBtnClass?: string) => void,
   signMessageWithAddress: (account: string, message: string, modalContent: (hash: string, data: string) => JSX.Element, passphrase?: string) => void,
   passphrase: string
-  ss58address: string
 }
 
 export interface GasPriceProps {
