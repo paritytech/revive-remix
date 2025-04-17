@@ -149,3 +149,12 @@ export const saigon = {
   explorerUrl: 'https://saigon-explorer.roninchain.com',
   rpcUrl: 'https://saigon-testnet.roninchain.com/rpc'
 }
+
+// export const westend = {
+//   chainId: 420420421,
+//   name: 'Westend',
+//   currency: 'WND',
+//   explorerUrl: 'https://blockscout-asset-hub.parity-chains-scw.parity.io/',
+//   rpcUrl: 'https://westend-asset-hub-eth-rpc.polkadot.io'
+// }
+  
