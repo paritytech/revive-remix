@@ -242,7 +242,7 @@ export class RunTab extends ViewPlugin {
     // await addProvider(4, 'vm-custom-fork', 'Remix VM - Custom fork', false, true, '', 'settingsVMCustomMode', titleVM)
 
     // wallet connect
-    // await addProvider(6, 'walletconnect', 'WalletConnect', false, false)
+    await addProvider(6, 'walletconnect', 'WalletConnect', false, false)
 
     // external provider
     await addProvider(10, 'basic-http-provider', 'Custom - External Http Provider', false, false)

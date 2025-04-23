@@ -91,8 +91,7 @@ let requiredModules = [ // services + layout views + system views
 // dependentModules shouldn't be manually activated (e.g hardhat is activated by remixd)
 const dependentModules = ['foundry', 'hardhat', 'truffle', 'slither']
 
-// const loadLocalPlugins = ['doc-gen', 'doc-viewer', 'etherscan', 'vyper', 'solhint', 'walletconnect', 'circuit-compiler', 'learneth', 'quick-dapp']
-const loadLocalPlugins = ['solhint', 'doc-gen', 'doc-viewer', 'quick-dapp']
+const loadLocalPlugins = ['solhint', 'doc-gen', 'doc-viewer', 'quick-dapp', 'walletconnect']
 
 const sensitiveCalls = {
   fileManager: ['writeFile', 'copyFile', 'rename', 'copyDir'],

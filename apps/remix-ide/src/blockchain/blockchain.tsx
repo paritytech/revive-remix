@@ -113,7 +113,7 @@ export class Blockchain extends Plugin {
     this.networkcallid = 0
     this.networkStatus = { network: { name: ' - ', id: ' - ' } }
     this.registeredPluginEvents = []
-    this.defaultPinnedProviders = ['injected-MetaMask']
+    this.defaultPinnedProviders = ['injected-MetaMask', 'walletconnect']
     this.pinnedProviders = []
     this.setupEvents()
     this.setupProviders()
