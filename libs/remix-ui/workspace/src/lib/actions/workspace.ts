@@ -277,7 +277,9 @@ export const loadWorkspacePreset = async (template: WorkspaceTemplate = 'remixDe
         const hashed = bytesToHex(hash.keccakFromString(params.code))
 
         path = 'contract-' + hashed.replace('0x', '').substring(0, 10) + (params.language && params.language.toLowerCase() === 'yul' ? '.yul' : '.sol')
-        content = atob(decodeURIComponent(params.code))
+        const raw = atob(decodeURIComponent(params.code))
+        const binaryString = Uint8Array.from(raw, c => c.charCodeAt(0));
+        content = new TextDecoder().decode(binaryString)
         await workspaceProvider.set(path, content)
       }
       if (params.shareCode) {
