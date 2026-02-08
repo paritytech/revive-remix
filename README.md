@@ -1,36 +1,20 @@
 <p align="center">
-  <img src="./apps/remix-ide/src/assets/img/icon.png" alt="Remix Logo" width="200"/>
+  <img src="./apps/remix-ide/src/assets/img/icon.png" alt="Revive Remix Logo" width="200"/>
 </p>
-<h3 align="center">Remix Project</h3>
-    
+<h3 align="center">Revive Remix</h3>
+
 <div align="center">
 
-
-[![CircleCI](https://img.shields.io/circleci/build/github/ethereum/remix-project?logo=circleci)](https://circleci.com/gh/ethereum/remix-project)
-[![Documentation Status](https://readthedocs.org/projects/remix-ide/badge/?version=latest)](https://remix-ide.readthedocs.io/en/latest/index.html)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/ethereum/remix-project/blob/master/CONTRIBUTING.md)
-[![GitHub contributors](https://img.shields.io/github/contributors/ethereum/remix-project?style=flat&logo=github)](https://github.com/ethereum/remix-project/blob/master/CONTRIBUTING.md)
-[![Awesome Remix](https://img.shields.io/badge/Awesome--Remix-resources-green?logo=awesomelists)](https://github.com/ethereum/awesome-remix)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&logo=github)](CONTRIBUTING.md)
 ![GitHub](https://img.shields.io/github/license/ethereum/remix-project)
-[![Discord](https://img.shields.io/badge/join-discord-brightgreen.svg?style=flat&logo=discord)](https://discord.gg/mh9hFCKkEq)
-[![X Follow](https://img.shields.io/twitter/follow/ethereumremix?style=flat&logo=x&color=green)](https://x.com/ethereumremix)
 
 </div>
 
-## Remix Project
+> **This project is a fork of [Remix IDE](https://github.com/ethereum/remix-project)** by the Ethereum Foundation. It is adapted for use with the Polkadot ecosystem. The original Remix IDE is maintained by the Remix team at [remix.ethereum.org](https://remix.ethereum.org).
 
-**Remix Project** is a rich toolset including Remix IDE, a comprehensive smart contract development tool. The Remix Project also includes Remix Plugin Engine and Remix Libraries which are low-level tools for wider use.  
+## Revive Remix IDE
 
-## Remix IDE
-**Remix IDE** is used for the entire journey of contract development by users of any knowledge level. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs. The IDE comes in 2 flavors and a VSCode extension:
-
-**Remix Online IDE**, see: [https://remix.ethereum.org](https://remix.ethereum.org)
-
-:point_right: Supported browsers: Firefox v100.0.1 & Chrome v101.0.4951.64. No support for Remix's use on tablets or smartphones or telephones.
-
-**Remix Desktop IDE**, see releases: [https://github.com/ethereum/remix-desktop/releases](https://github.com/ethereum/remix-desktop/releases)
-
-![Remix screenshot](https://github.com/ethereum/remix-project/raw/master/apps/remix-ide/remix-screenshot-400h.png)
+**Revive Remix IDE** is a smart contract development tool forked from Remix IDE, adapted for the Polkadot ecosystem. It inherits Remix's rich plugin system, intuitive GUI, and support for the full contract development lifecycle.
 
 
 ## Remix libraries 

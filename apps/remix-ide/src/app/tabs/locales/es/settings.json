@@ -36,6 +36,6 @@
   "settings.port": "PUERTO",
   "settings.projectID": "ID DEL PROYECTO",
   "settings.projectSecret": "SECRETO DE PROYECTO",
-  "settings.analyticsInRemix": "Analíticas en IDE Remix",
+  "settings.analyticsInRemix": "Analíticas en Revive Remix IDE",
   "settings.enableSaveEnvState": "Save environment state"
 }

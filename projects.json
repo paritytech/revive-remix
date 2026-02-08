@@ -135,7 +135,7 @@
             },
             {
               "file": "apps/remix-ide-e2e/src/local-plugin/src/favicon.ico",
-              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/remix-ide-e2e/src/local-plugin/src/index.html",
@@ -1163,7 +1163,7 @@
             },
             {
               "file": "apps/solidity-compiler/src/favicon.ico",
-              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/solidity-compiler/src/index.html",
@@ -3208,7 +3208,7 @@
             },
             {
               "file": "apps/walletconnect/src/logo.svg",
-              "hash": "267b6f5b78f1f246bda5c5ddd44de8ea11d1544f"
+              "hash": "67ccf38733475f43e6df2d796bcf78ef9a7d2660"
             },
             {
               "file": "apps/walletconnect/src/main.tsx",
@@ -3232,7 +3232,7 @@
             },
             {
               "file": "apps/walletconnect/src/services/constant.ts",
-              "hash": "5ffe3434055192a701ba82d69512744a959cc5b1"
+              "hash": "31d13de25c10e2213e4a5574418be2bd05b6bc84"
             },
             {
               "file": "apps/walletconnect/src/services/WalletConnectRemixClient.ts",
@@ -3250,11 +3250,11 @@
             },
             {
               "file": "apps/walletconnect/src/utils/chains.ts",
-              "hash": "783fed7032f9fb6d7bbf20ffa4efb698a73335de"
+              "hash": "48fcf3043f511438ed83ca800ce65f14a01a6f94"
             },
             {
               "file": "apps/walletconnect/src/utils/constants.ts",
-              "hash": "84e806591d9097162ccc85c213098c936b867bbd"
+              "hash": "9c93c71bc853adadae9edd8b68c382f3418f7567"
             },
             {
               "file": "apps/walletconnect/tsconfig.app.json",
@@ -4328,7 +4328,7 @@
             },
             {
               "file": "apps/doc-viewer/src/favicon.ico",
-              "hash": "bcd5dfd67cd0361b78123e95c2dd96031f27f743"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/doc-viewer/src/index.html",
@@ -4989,7 +4989,7 @@
             },
             {
               "file": "apps/etherscan/src/favicon.ico",
-              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/etherscan/src/index.html",
@@ -5518,7 +5518,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/components/preload.tsx",
-              "hash": "091d4686eff7c82c9aa0828bf9c9e96d6444aef6",
+              "hash": "5cf7a1cbf481c695b8a28bc592260af3c50099eb",
               "deps": [
                 "npm:axios",
                 "npm:react",
@@ -6218,7 +6218,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/en/remixApp.json",
-              "hash": "c42f8531f3afdd8bc067370dc552338cf82ccb01"
+              "hash": "b286f5a1055f50b708de62bc73edac16ed92a722"
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/en/remixd.json",
@@ -6234,7 +6234,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/en/settings.json",
-              "hash": "2ea6de0d4b46583c05419440f0636b6be50b5366"
+              "hash": "bd2b5dc0d3d8919bb4df607d685b913ce950e4a8"
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/en/solidity.json",
@@ -6302,7 +6302,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/es/settings.json",
-              "hash": "5d7ddda6ab59e4031d912bd358aa3d2b56ee06bd"
+              "hash": "17fec2b18d1897265a73fce8e63a177a83334794"
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/es/solidity.json",
@@ -6370,7 +6370,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/fr/settings.json",
-              "hash": "3b61ab68c219f306014ebae561c5e7f1626f9ae1"
+              "hash": "0a155975fba9acd1611f3634280b543dfb451e44"
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/fr/solidity.json",
@@ -6434,7 +6434,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/it/settings.json",
-              "hash": "251089f6cb0334f859369efda7dc3bc587828050"
+              "hash": "ba7a6cb7fdca125ff6a4aed250625f0c14d9bcd3"
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/it/solidity.json",
@@ -6502,7 +6502,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/ko/settings.json",
-              "hash": "bf4dafe53da7c1c0221fdc4c0d318cd35baa4314"
+              "hash": "5d1ea0480c80728a9b11092266b2b8fb7cd57a31"
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/ko/solidity.json",
@@ -6566,7 +6566,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/ru/settings.json",
-              "hash": "87887396ffbb553a53c5b46707ffa3f19d196212"
+              "hash": "e215718adaf33b185fdd3f51b590300b5068c09a"
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/ru/solidity.json",
@@ -6630,7 +6630,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/zh/settings.json",
-              "hash": "8a27f4a83d329f16389e217ce9fd242ce0d7a953"
+              "hash": "4acf3a054fb67ad3d0f47c3faf3c19ed7fce142b"
             },
             {
               "file": "apps/remix-ide/src/app/tabs/locales/zh/solidity.json",
@@ -6785,7 +6785,7 @@
             },
             {
               "file": "apps/remix-ide/src/app/udapp/run-tab.js",
-              "hash": "45b682ded26e1813e60f92ccbf5e42c30c547fa1",
+              "hash": "d8f431b74816dad98040652ed4e9096b8183e527",
               "deps": [
                 "npm:react",
                 "npm:@remixproject/engine-web",
@@ -6838,14 +6838,6 @@
               "deps": [
                 "npm:csjs-inject"
               ]
-            },
-            {
-              "file": "apps/remix-ide/src/assets/audio/remiGuitar-single-power-chord-A-minor.mp3",
-              "hash": "6deea95085ac1877899f19438990a1e3bc29fde8"
-            },
-            {
-              "file": "apps/remix-ide/src/assets/audio/remiGuitar-single-power-chord-A-minor.wav",
-              "hash": "f863ffd8a275e9d275e088a7c4c1599e7e430411"
             },
             {
               "file": "apps/remix-ide/src/assets/css/font-awesome.min.css",
@@ -6993,11 +6985,11 @@
             },
             {
               "file": "apps/remix-ide/src/assets/img/bgRemi_small.webp",
-              "hash": "3423aa5bab536820125daada6129d1c69623858b"
+              "hash": "3bad89368ce5f8f7a8b68ad835951ebf6d215bcd"
             },
             {
               "file": "apps/remix-ide/src/assets/img/bgRemi.webp",
-              "hash": "80ee32e1deba8f095d0b4de549123281b2231844"
+              "hash": "5b489794f6d9278b6eb3026697dd6b8229e047a0"
             },
             {
               "file": "apps/remix-ide/src/assets/img/brave.png",
@@ -7033,7 +7025,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/img/favicon.ico",
-              "hash": "4f550708f2db2fdd6e319eb31625b2a65249b07a"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/remix-ide/src/assets/img/fileManager.webp",
@@ -7053,7 +7045,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/img/guitarRemiCroped.webp",
-              "hash": "26e8957622c9e6a17468f1d5e0beea2dfea913f9"
+              "hash": "ebf2f6da8bbd4edbf8ff44ffae93cb836e582a43"
             },
             {
               "file": "apps/remix-ide/src/assets/img/hardhat.png",
@@ -7061,7 +7053,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/img/hexagon-remix-greengrey-texture.png",
-              "hash": "49717083ac6eb3a14ca175c53bb6128e8291864f"
+              "hash": "14bcae5e3cfaa9135aca3403ef7e95981c476ee8"
             },
             {
               "file": "apps/remix-ide/src/assets/img/home.webp",
@@ -7073,7 +7065,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/img/icon.png",
-              "hash": "1d6bcd0352995329cc62c106867ff9b2c1fdf67f"
+              "hash": "809b261af7a4aff7f54b054ccba2b8b4ffdf50a8"
             },
             {
               "file": "apps/remix-ide/src/assets/img/ipfs.webp",
@@ -7089,7 +7081,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/img/logoicon.svg",
-              "hash": "d064e0a2275431eab6dc334a1af734a5bf7adb8c"
+              "hash": "67ccf38733475f43e6df2d796bcf78ef9a7d2660"
             },
             {
               "file": "apps/remix-ide/src/assets/img/metamask.png",
@@ -7137,39 +7129,39 @@
             },
             {
               "file": "apps/remix-ide/src/assets/img/remi_drums_whatsnew.webp",
-              "hash": "78b628bd4798e07056f0d62c223c515336bd5bad"
+              "hash": "ebf2f6da8bbd4edbf8ff44ffae93cb836e582a43"
             },
             {
               "file": "apps/remix-ide/src/assets/img/remix_logo_light.webp",
-              "hash": "097a95e50e60ab2319d185bd580a63e589f31815"
+              "hash": "ebf2f6da8bbd4edbf8ff44ffae93cb836e582a43"
             },
             {
               "file": "apps/remix-ide/src/assets/img/remix-logo-blue.png",
-              "hash": "cc79f5ece6ad259ef39bf25bea01b44c3dce0f0a"
+              "hash": "809b261af7a4aff7f54b054ccba2b8b4ffdf50a8"
             },
             {
               "file": "apps/remix-ide/src/assets/img/remixLogo.webp",
-              "hash": "90e38ad58637da1d389f1ace8eb61aa536cc93b4"
+              "hash": "ebf2f6da8bbd4edbf8ff44ffae93cb836e582a43"
             },
             {
               "file": "apps/remix-ide/src/assets/img/remixRewardBetaTester_small.webp",
-              "hash": "9558dfa940ea9e2eec8d1998d6242795c92a9ca6"
+              "hash": "69dba0de59167b3a5922b2f7533c131c02aee2d8"
             },
             {
               "file": "apps/remix-ide/src/assets/img/remixRewardBetaTester.webp",
-              "hash": "59a14a9ad2a85db7305b0c6269fb5ff56a5be16c"
+              "hash": "ebf2f6da8bbd4edbf8ff44ffae93cb836e582a43"
             },
             {
               "file": "apps/remix-ide/src/assets/img/remixRewardUser_small.webp",
-              "hash": "d4571ce3330e540d7e9e7091fd8d9ca6c91f4b59"
+              "hash": "69dba0de59167b3a5922b2f7533c131c02aee2d8"
             },
             {
               "file": "apps/remix-ide/src/assets/img/remixRewardUser.webp",
-              "hash": "4f63b3906988549280c689184def0c3af9b81bd7"
+              "hash": "ebf2f6da8bbd4edbf8ff44ffae93cb836e582a43"
             },
             {
               "file": "apps/remix-ide/src/assets/img/remixverticaltextLogo.png",
-              "hash": "179807a658547f7063dcf671076027c8f18a0d97"
+              "hash": "809b261af7a4aff7f54b054ccba2b8b4ffdf50a8"
             },
             {
               "file": "apps/remix-ide/src/assets/img/search_icon.webp",
@@ -7181,7 +7173,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/img/sleepingRemiCroped.webp",
-              "hash": "4e01719ad2401aec0a3f2a901c3b4ee7b2719899"
+              "hash": "ebf2f6da8bbd4edbf8ff44ffae93cb836e582a43"
             },
             {
               "file": "apps/remix-ide/src/assets/img/solhintLogo.webp",
@@ -7285,11 +7277,11 @@
             },
             {
               "file": "apps/remix-ide/src/assets/js/loader.js",
-              "hash": "4abdfc6526f9616d18716efe4dcc13f02f7bea6d"
+              "hash": "e3cba1bf420724382f92100bca05f6115f9b0daf"
             },
             {
               "file": "apps/remix-ide/src/assets/js/metadata.json",
-              "hash": "3f6a2da862ed4fa3211eb0a65fa857c326421e6c"
+              "hash": "05445daa817ef68f555d30db35caf1d2ebb20296"
             },
             {
               "file": "apps/remix-ide/src/assets/js/parser/antlr.js",
@@ -7321,7 +7313,7 @@
             },
             {
               "file": "apps/remix-ide/src/blockchain/blockchain.tsx",
-              "hash": "f3ecd0d7b3a3865170690fe8502a89dae2e009f3",
+              "hash": "b8fee2bbaf468e4c48788b196b5bfa7d14f4d689",
               "deps": [
                 "npm:react",
                 "npm:web3-utils",
@@ -7382,7 +7374,7 @@
             },
             {
               "file": "apps/remix-ide/src/favicon.ico",
-              "hash": "4f550708f2db2fdd6e319eb31625b2a65249b07a"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/remix-ide/src/global/registry.js",
@@ -7390,11 +7382,11 @@
             },
             {
               "file": "apps/remix-ide/src/index.css",
-              "hash": "c8e34313c1dd0dc7e053cb57d6c525b9f7bf3722"
+              "hash": "a7de776835e4bce766c2d6abc706c563c8f709d5"
             },
             {
               "file": "apps/remix-ide/src/index.html",
-              "hash": "826b145f72b70875320a354b3bf2449ad4cfb5ea"
+              "hash": "d8ceb7948b4fe1dc62c92a52fd1f3d16d8bedf38"
             },
             {
               "file": "apps/remix-ide/src/index.tsx",
@@ -7434,7 +7426,7 @@
             },
             {
               "file": "apps/remix-ide/src/remixAppManager.js",
-              "hash": "6b83e5810f4652a3445d8257039f8c1d2a2e1531",
+              "hash": "87ffb4140ea1387a7959753f8c9b720aeb4c8bd7",
               "deps": [
                 "npm:@remixproject/engine",
                 "npm:events",
@@ -7455,7 +7447,7 @@
             },
             {
               "file": "apps/remix-ide/src/walkthroughService.js",
-              "hash": "bbb1258645aa3bd7e8b489aab709fa63218b15d3",
+              "hash": "86566c63d8f6710c81d93d29b3a47a7882488e1e",
               "deps": [
                 "npm:@remixproject/engine",
                 "npm:intro.js"
@@ -7496,7 +7488,7 @@
             },
             {
               "file": "apps/remix-ide/src/assets/version.json",
-              "hash": "45219de90c9adc4e8c2f7c080cf2cbfcdd89d7aa"
+              "hash": "365a815bea84152e3e7d9f2cc3e4e2136fe31de4"
             }
           ]
         }
@@ -7965,7 +7957,7 @@
             },
             {
               "file": "apps/debugger/src/favicon.ico",
-              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/debugger/src/index.html",
@@ -8419,7 +8411,7 @@
             },
             {
               "file": "libs/remix-ui/app/src/lib/remix-app/components/splashscreen.tsx",
-              "hash": "f110eb66b45555cb5677d11dc6282cb5754ab3cf",
+              "hash": "cd25cf0b5b9d9ec3d6e413af7b0d56a5bb8ebcd0",
               "deps": [
                 "npm:react"
               ]
@@ -8469,7 +8461,7 @@
             },
             {
               "file": "libs/remix-ui/app/src/lib/remix-app/style/remix-app.css",
-              "hash": "a1d447e8a5dca089e993ea74e5013d8ce098ec16"
+              "hash": "689fc9f97f7947fff417b033962e078f3603a197"
             },
             {
               "file": "libs/remix-ui/app/src/lib/remix-app/types/index.ts",
@@ -9709,7 +9701,7 @@
             },
             {
               "file": "libs/remix-ui/home-tab/src/lib/components/homeTabTitle.tsx",
-              "hash": "47c800e2eddf0b501de55153ac497052f479e5ec",
+              "hash": "790ba1cd416a6b7290782d5b6edd44654f14b627",
               "deps": [
                 "npm:react",
                 "npm:react-intl",
@@ -10993,7 +10985,7 @@
             },
             {
               "file": "libs/remix-ui/terminal/src/lib/terminalWelcome.tsx",
-              "hash": "1d1dcf77c864e376c134146fb5936d565e0281af",
+              "hash": "4fb318e2bfd869497b884f422c152b101301e223",
               "deps": [
                 "npm:react",
                 "npm:react-intl"
@@ -11129,7 +11121,7 @@
             },
             {
               "file": "libs/remix-ui/vertical-icons-panel/src/lib/components/BasicLogo.tsx",
-              "hash": "620e749cb48f39fafaa6b206eb8a8eaf0ed289ee",
+              "hash": "ff96d56874ab0f297544d6497239536d973396d6",
               "deps": [
                 "npm:react"
               ]
@@ -11176,7 +11168,7 @@
             },
             {
               "file": "libs/remix-ui/vertical-icons-panel/src/lib/remix-ui-vertical-icons-panel.css",
-              "hash": "cdfacf1752ac621708ffaceeb873e82c193443ac"
+              "hash": "c15f88dabf668c0983e25eb6981edde90f26e563"
             },
             {
               "file": "libs/remix-ui/vertical-icons-panel/src/lib/remix-ui-vertical-icons-panel.tsx",
@@ -11818,7 +11810,7 @@
             },
             {
               "file": "apps/doc-gen/src/favicon.ico",
-              "hash": "bcd5dfd67cd0361b78123e95c2dd96031f27f743"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/doc-gen/src/index.html",
@@ -11991,7 +11983,7 @@
             },
             {
               "file": "apps/solhint/src/favicon.ico",
-              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/solhint/src/index.d.ts",
@@ -12500,7 +12492,7 @@
             },
             {
               "file": "apps/vyper/src/favicon.ico",
-              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+              "hash": "76d1b8d82e2fb0158b39f274853bf6ae9fbb128e"
             },
             {
               "file": "apps/vyper/src/index.html",
