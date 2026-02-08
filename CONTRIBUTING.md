@@ -1,6 +1,6 @@
 # Contributing
 
-Everyone is very welcome to contribute on the codebase of Remix. Please join our [Discord](https://discord.gg/mh9hFCKkEq) in case of any queries.
+> **This project is a fork of [Remix IDE](https://github.com/ethereum/remix-project)** by the Ethereum Foundation, adapted for the Polkadot ecosystem.
 
 ## Development
 Remix libraries work closely with [Remix IDE](https://remix.ethereum.org). Each library has a readme to explain its application.

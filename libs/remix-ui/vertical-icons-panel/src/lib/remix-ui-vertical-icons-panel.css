@@ -11,10 +11,10 @@
   }
 
   .remixui_homeIcon svg path {
-    fill: var(--primary);
+    fill: #E6007A;
   }
   .remixui_homeIcon svg polygon {
-    fill: var(--primary);
+    fill: #E6007A;
   }
   .remixui_icons {
     display: flex;

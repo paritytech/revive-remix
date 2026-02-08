@@ -66,12 +66,7 @@ function HomeTabTitle() {
   })
 
   const searchInputRef = useRef(null)
-  const remiAudioEl = useRef(null)
   const intl = useIntl()
-
-  const playRemi = async () => {
-    remiAudioEl.current.play()
-  }
   const handleSearchKeyDown = (e: KeyboardEvent) => {
     if (e.target !== searchInputRef.current) return
     if (e.key === 'Enter') {
@@ -101,14 +96,8 @@ function HomeTabTitle() {
       <div className="d-flex py-2 justify-content-between">
         <div className="d-flex justify-content-start">
           <span className="h-80 text-uppercase" style={{ fontSize: 'xx-large', fontFamily: 'Noah, sans-serif' }}>
-            Remix
+            Revive Remix
           </span>
-          <div className="ml-2 d-flex">
-            <div onClick={() => playRemi()}>
-              <img className="" src="assets/img/guitarRemiCroped.webp" style={{ height: '3rem' }} alt=""></img>
-            </div>
-            <audio id="remiAudio" muted={false} src="assets/audio/remiGuitar-single-power-chord-A-minor.mp3" ref={remiAudioEl}></audio>
-          </div>
         </div>
         <span className="d-flex flex-nowrap align-self-end">
           {/* {iconButtons.map((button, index) => (
@@ -132,29 +121,7 @@ function HomeTabTitle() {
           ))} */}
         </span>
       </div>
-      <b className="py-1 text-dark" style={{ fontStyle: 'italic' }}>
-        <FormattedMessage id="home.nativeIDE" />
-      </b>
       <div className="pb-1" id="hTGeneralLinks">
-        <a className="remixui_home_text" onClick={() => _paq.push(['trackEvent', 'hometab', 'header', 'webSite'])} target="__blank" href="https://remix-project.org">
-          <FormattedMessage id="home.website" />
-        </a>
-        {/* <a
-          className="pl-2 remixui_home_text"
-          onClick={() => _paq.push(['trackEvent', 'hometab', 'header', 'documentation'])}
-          target="__blank"
-          href="https://remix-ide.readthedocs.io/en/latest"
-        >
-          <FormattedMessage id="home.documentation" />
-        </a> */}
-        {/* <a
-          className="pl-2 remixui_home_text"
-          onClick={() => _paq.push(['trackEvent', 'hometab', 'header', 'remixDesktop'])}
-          target="__blank"
-          href="https://github.com/remix-project-org/remix-desktop-insiders"
-        >
-          <FormattedMessage id="home.remixDesktop" />
-        </a> */}
       </div>
       <div className="d-flex pb-1 align-items-center">
         <input
